@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>ภาษาไทย ป.1</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ภาษาไทย ป.1 - บทที่ 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <h1>📘 ภาษาไทย ป.1</h1>
+  <header>
+    <h1>ภาษาไทย ป.1</h1>
+    <p class="subtitle">บทที่ 1: พยัญชนะไทย</p>
+  </header>
 
-  <video id="lessonVideo" width="640" controls>
-    <source src="../assets/videos/thai-p1.mp4" type="video/mp4">
-  </video>
+  <section class="video-container">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </section>
 
-  <div id="timerBox" style="display:none;">
-    ⏱ เวลาเรียน: <span id="timer">0:00</span>
-  </div>
+  <section class="button-group">
+    <button onclick="startActivity()">เริ่มกิจกรรม</button>
+    <button onclick="showQuiz()">ทำแบบทดสอบ</button>
+    <a href="../index.html" class="back-link">← กลับหน้าหลัก</a>
+  </section>
 
-  <div id="quizSection" style="display:none;">
-    <h2>❓ แบบฝึกหัด</h2>
-    <p>1. คำว่า "มะม่วง" เป็นคำประเภทใด?</p>
-    <input type="text" id="answer">
-    <button onclick="submitAnswer()">ส่งคำตอบ</button>
-  </div>
+  <script>
+    function startActivity() {
+      alert("เริ่มกิจกรรมพยัญชนะไทยแล้ว!");
+    }
 
-  <div id="summarySection" style="display:none;">
-    <h2>📊 สรุปผลการเรียน</h2>
-    <p id="summaryText"></p>
-  </div>
-
-  <script src="../assets/js/script.js"></script>
+    function showQuiz() {
+      alert("กำลังโหลดแบบทดสอบ...");
+    }
+  </script>
 </body>
 </html>
