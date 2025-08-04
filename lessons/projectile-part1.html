@@ -1,75 +1,73 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>Projectile Motion - Part 1</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <meta charset="UTF-8" />
+  <title>การเคลื่อนที่แบบโพรเจกไทล์</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali&display=swap" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <main>
-    <h1>การเคลื่อนที่แบบโพรเจกไทล์ (Projectile Motion) - Part 1</h1>
+  <header>
+    <h1>โพรเจกไทล์คืออะไร?</h1>
+    <p class="subtitle">เรียนรู้การเคลื่อนที่แบบโพรเจกไทล์ผ่านวิดีโอและกิจกรรม</p>
+  </header>
 
-    <section class="student-info">
-      <label>ชื่อผู้เรียน: 
-        <input type="text" id="studentName" placeholder="กรอกชื่อที่นี่" />
-      </label>
-      <button onclick="saveName()">บันทึก</button>
-      <span id="studentNameDisplay"></span>
-    </section>
-
-    <section class="status">
-      <p>คะแนน: <span id="score">0</span> | เวลา: <span id="timer">0:00</span></p>
-    </section>
-
-    <section class="video-section">
-      <h2>🎬 วิดีโออธิบายโพรเจกไทล์</h2>
-      <video controls width="720" height="405">
-        <source src="../assets/video/projectile.mp4" type="video/mp4">
+  <section class="section video-section">
+    <div class="video-container">
+      <video controls>
+        <source src="../assets/video/projectile.mp4" type="video/mp4" />
         เบราว์เซอร์ของคุณไม่รองรับวิดีโอ HTML5
       </video>
-    </section>
+    </div>
+  </section>
 
-    <section class="summary">
-      <h2>📌 สรุปเนื้อหา</h2>
-      <ul>
-        <li>การเคลื่อนที่แบบโพรเจกไทล์ เป็นการเคลื่อนที่ในแนวโค้งภายใต้แรงโน้มถ่วงโลก</li>
-        <li>สามารถแยกการเคลื่อนที่ออกเป็นแนวราบ (แนวแกน X) และแนวดิ่ง (แนวแกน Y)</li>
-        <li>แนวราบ: ความเร็วคงที่ \( v_x \)</li>
-        <li>แนวดิ่ง: มีความเร่ง \( g = 9.8 \, m/s^2 \) ทำให้ความเร็วเปลี่ยนไปตามเวลา</li>
-        <li>สมการที่ใช้ เช่น:
-          <ul>
-            <li>\( R = \frac{v^2 \sin(2\theta)}{g} \) — หาระยะทาง</li>
-            <li>\( H = \frac{v^2 \sin^2(\theta)}{2g} \) — หาความสูงสูงสุด</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+  <section class="section">
+    <h2>สรุปเนื้อหา</h2>
+    <ul>
+      <li>โพรเจกไทล์คือการเคลื่อนที่ในแนวโค้ง</li>
+      <li>ประกอบด้วยแนวราบ (vx) และแนวดิ่ง (vy)</li>
+      <li>แรงโน้มถ่วง (g) ส่งผลต่อการเคลื่อนที่แนวดิ่ง</li>
+    </ul>
+  </section>
 
-    <section class="drag-drop">
-      <h2>🧩 Drag & Drop: จับคู่คำกับแนวการเคลื่อนที่</h2>
+  <section class="section">
+    <h2>จับคู่คำศัพท์กับแนวการเคลื่อนที่</h2>
+    <div class="drag-container">
       <div class="draggable" draggable="true">vx</div>
       <div class="draggable" draggable="true">vy</div>
       <div class="draggable" draggable="true">g</div>
+    </div>
 
+    <div class="drag-container">
       <div class="drop-zone" data-correct="vx">แนวราบ</div>
       <div class="drop-zone" data-correct="vy">แนวดิ่ง</div>
       <div class="drop-zone" data-correct="g">แรงโน้มถ่วง</div>
-    </section>
+    </div>
+  </section>
 
-    <section class="quiz">
-      <h2>❓ Quiz: ความเข้าใจเบื้องต้น</h2>
-      <p>ถ้าวัตถุถูกยิงทำมุม 45° กับแนวระดับ มันจะเคลื่อนที่แบบใด?</p>
-      <div class="quiz-options">
-        <button onclick="checkAnswer('ตกตรง')">ตกตรง</button>
-        <button onclick="checkAnswer('เป็นเส้นตรง')">เป็นเส้นตรง</button>
-        <button onclick="checkAnswer('เป็นโค้ง')">เป็นโค้ง</button>
-        <button onclick="checkAnswer('แนวราบอย่างเดียว')">แนวราบอย่างเดียว</button>
-      </div>
-    </section>
+  <section class="section">
+    <h2>แบบทดสอบ</h2>
+    <p style="text-align: center;">ถ้าวัตถุถูกยิงทำมุม 45° กับพื้น แนววิถีของมันจะเป็นแบบใด?</p>
+    <div class="button-group">
+      <button onclick="checkAnswer('ตกตรง')">ตกตรง</button>
+      <button onclick="checkAnswer('เป็นเส้นตรง')">เป็นเส้นตรง</button>
+      <button onclick="checkAnswer('เป็นโค้ง')">เป็นโค้ง</button>
+      <button onclick="checkAnswer('แนวราบอย่างเดียว')">แนวราบอย่างเดียว</button>
+    </div>
+  </section>
 
-    <audio id="correctSound" src="../assets/sound/correct.mp3"></audio>
-    <audio id="wrongSound" src="../assets/sound/wrong.mp3"></audio>
-  </main>
+  <section class="section">
+    <h2>ข้อมูลผู้เรียน</h2>
+    <div style="text-align: center;">
+      <input type="text" id="studentName" placeholder="ชื่อของคุณ" />
+      <button onclick="saveName()">บันทึก</button>
+      <p>👩‍🎓 <span id="studentNameDisplay"></span></p>
+    </div>
+    <p style="text-align: center;">คะแนน: <span id="score">0</span> | เวลาเรียน: <span id="timer">0:00</span></p>
+  </section>
+
+  <audio id="correctSound" src="../assets/sound/correct.mp3"></audio>
+  <audio id="wrongSound" src="../assets/sound/wrong.mp3"></audio>
 
   <script src="../assets/js/projectile-part1.js"></script>
 </body>
