@@ -104,3 +104,9 @@ button {
 button:hover {
   background-color: #ffc2d1;
 }
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
