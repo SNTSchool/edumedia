@@ -5,32 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ภาษาไทย ป.1 - บทที่ 1</title>
   <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
   <header>
     <h1>ภาษาไทย ป.1</h1>
     <p class="subtitle">บทที่ 1: พยัญชนะไทย</p>
+    <p class="subtitle">ผู้เรียน: <span id="studentNameDisplay">ไม่ระบุ</span></p>
   </header>
+
+  <section class="section">
+    <h2>📚 ความรู้เบื้องต้น</h2>
+    <p>พยัญชนะไทยมีทั้งหมด 44 ตัว ใช้ในการสร้างคำและเสียงในภาษาไทย เช่น ก ข ค ง จ ฯลฯ</p>
+    <p>ในบทเรียนนี้ เราจะเรียนรู้พยัญชนะเบื้องต้น ได้แก่ ก ข และ ค พร้อมคำศัพท์ประกอบ</p>
+    <ul>
+      <li><strong>ก</strong> - ไก่</li>
+      <li><strong>ข</strong> - ขนม</li>
+      <li><strong>ค</strong> - คน</li>
+    </ul>
+  </section>
 
   <section class="video-container">
     <iframe src="https://www.youtube.com/embed/9zjKz0G4fYQ" allowfullscreen></iframe>
   </section>
 
-  <section class="button-group">
-    <button onclick="startActivity()">เริ่มกิจกรรมพยัญชนะ</button>
-    <button onclick="showQuiz()">ทำแบบทดสอบ</button>
-    <a href="../index.html" class="back-link">← กลับหน้าหลัก</a>
+  <section class="section">
+    <h2>🎮 กิจกรรมลากวางพยัญชนะ</h2>
+    <p class="subtitle">ลากพยัญชนะไปวางในช่องที่ตรงกับคำศัพท์</p>
+    <div class="drag-container">
+      <div class="draggable" draggable="true" id="char-ก">ก</div>
+      <div class="draggable" draggable="true" id="char-ข">ข</div>
+      <div class="draggable" draggable="true" id="char-ค">ค</div>
+    </div>
+
+    <div class="drag-container">
+      <div class="drop-zone" data-correct="ก">ไก่</div>
+      <div class="drop-zone" data-correct="ข">ขนม</div>
+      <div class="drop-zone" data-correct="ค">คน</div>
+    </div>
   </section>
 
-  <script>
-    function startActivity() {
-      window.location.href = "activity-p1-thai.html"; // สร้างหน้า interactive เพิ่มเติมได้
-    }
+  <section class="section">
+    <h2>📝 แบบทดสอบพยัญชนะ</h2>
+    <p class="subtitle">เลือกคำที่มีพยัญชนะ "ข"</p>
+    <div class="button-group">
+      <button onclick="checkAnswer('ขนม')">ขนม</button>
+      <button onclick="checkAnswer('กบ')">กบ</button>
+      <button onclick="checkAnswer('ปลา')">ปลา</button>
+    </div>
 
-    function showQuiz() {
-      window.location.href = "quiz-p1-thai.html"; // สร้างหน้า quiz เพิ่มเติมได้
-    }
-  </script>
+    <p class="subtitle">เลือกคำที่มีพยัญชนะ "ค"</p>
+    <div class="button-group">
+      <button onclick="checkAnswer('คน')">คน</button>
+      <button onclick="checkAnswer('ข้าว')">ข้าว</button>
+      <button onclick="checkAnswer('ปลา')">ปลา</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>⏱ เวลาเรียน</h2>
+    <p class="subtitle">เวลาที่ใช้: <span id="timer">0:00</span></p>
+  </section>
+
+  <section class="section">
+    <h2>⭐ คะแนนของคุณ</h2>
+    <p class="subtitle">คะแนนรวม: <span id="score">0</span> คะแนน</p>
+  </section>
+
+  <section class="section">
+    <h2>👤 ตั้งชื่อผู้เรียน</h2>
+    <div class="button-group">
+      <input type="text" id="studentName" placeholder="กรอกชื่อของคุณ" />
+      <button onclick="saveName()">บันทึกชื่อ</button>
+    </div>
+  </section>
+
+  <!-- เสียงตอบถูก/ผิด -->
+  <audio id="correctSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7c3c6b3b7e.mp3?filename=correct-2-46134.mp3"></audio>
+  <audio id="wrongSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1b6a7e9b7e.mp3?filename=wrong-2-46133.mp3"></audio>
+
+  <!-- JavaScript -->
+  <script src="../assets/css/p1-thai.js"></script>
 </body>
 </html>
