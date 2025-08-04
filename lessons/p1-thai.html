@@ -14,22 +14,22 @@
   </header>
 
   <section class="video-container">
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/9zjKz0G4fYQ" allowfullscreen></iframe>
   </section>
 
   <section class="button-group">
-    <button onclick="startActivity()">เริ่มกิจกรรม</button>
+    <button onclick="startActivity()">เริ่มกิจกรรมพยัญชนะ</button>
     <button onclick="showQuiz()">ทำแบบทดสอบ</button>
     <a href="../index.html" class="back-link">← กลับหน้าหลัก</a>
   </section>
 
   <script>
     function startActivity() {
-      alert("เริ่มกิจกรรมพยัญชนะไทยแล้ว!");
+      window.location.href = "activity-p1-thai.html"; // สร้างหน้า interactive เพิ่มเติมได้
     }
 
     function showQuiz() {
-      alert("กำลังโหลดแบบทดสอบ...");
+      window.location.href = "quiz-p1-thai.html"; // สร้างหน้า quiz เพิ่มเติมได้
     }
   </script>
 </body>
