@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ภาษาไทย ป.1</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <h1>📘 ภาษาไทย ป.1</h1>
 
+  <video id="lessonVideo" width="640" controls>
+    <source src="../assets/videos/thai-p1.mp4" type="video/mp4">
+  </video>
+
+  <div id="timerBox" style="display:none;">
+    ⏱ เวลาเรียน: <span id="timer">0:00</span>
+  </div>
+
+  <div id="quizSection" style="display:none;">
+    <h2>❓ แบบฝึกหัด</h2>
+    <p>1. คำว่า "มะม่วง" เป็นคำประเภทใด?</p>
+    <input type="text" id="answer">
+    <button onclick="submitAnswer()">ส่งคำตอบ</button>
+  </div>
+
+  <div id="summarySection" style="display:none;">
+    <h2>📊 สรุปผลการเรียน</h2>
+    <p id="summaryText"></p>
+  </div>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
