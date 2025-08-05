@@ -1,70 +1,25 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <title>การเคลื่อนที่แบบโพรเจกไทล์</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali&display=swap" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <meta charset="UTF-8">
+  <title>ฟิสิกส์โพรเจกไทล์ - วิเคราะห์ขั้นสูง</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <header>
-    <h1>โพรเจกไทล์คืออะไร?</h1>
-    <p class="subtitle">เรียนรู้การเคลื่อนที่แบบโพรเจกไทล์ผ่านวิดีโอและกิจกรรม</p>
+    <h1>วิเคราะห์โพรเจกไทล์ (ขั้นสูง)</h1>
+    <p class="subtitle">แบบฝึกทักษะวิเคราะห์ระดับโอลิมปิก</p>
   </header>
 
-  <section class="section video-section">
-  <div class="video-container">
-    <iframe src="https://drive.google.com/file/d/1Umpg20UyqPq1FXMNoXizgnjEhUvEqYjr/preview" allow="autoplay" allowfullscreen></iframe>
+  <main id="quizContainer" class="section"></main>
+
+  <div class="button-group">
+    <button onclick="submitQuiz()">ส่งคำตอบ</button>
+    <p id="result"></p>
   </div>
-</section>
 
-  <section class="section">
-    <h2>สรุปเนื้อหา</h2>
-    <ul>
-      <li>โพรเจกไทล์คือการเคลื่อนที่ในแนวโค้ง</li>
-      <li>ประกอบด้วยแนวราบ (vx) และแนวดิ่ง (vy)</li>
-      <li>แรงโน้มถ่วง (g) ส่งผลต่อการเคลื่อนที่แนวดิ่ง</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>จับคู่คำศัพท์กับแนวการเคลื่อนที่</h2>
-    <div class="drag-container">
-      <div class="draggable" draggable="true">vx</div>
-      <div class="draggable" draggable="true">vy</div>
-      <div class="draggable" draggable="true">g</div>
-    </div>
-
-    <div class="drag-container">
-      <div class="drop-zone" data-correct="vx">แนวราบ</div>
-      <div class="drop-zone" data-correct="vy">แนวดิ่ง</div>
-      <div class="drop-zone" data-correct="g">แรงโน้มถ่วง</div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>แบบทดสอบ</h2>
-    <p style="text-align: center;">ถ้าวัตถุถูกยิงทำมุม 45° กับพื้น แนววิถีของมันจะเป็นแบบใด?</p>
-    <div class="button-group">
-      <button onclick="checkAnswer('ตกตรง')">ตกตรง</button>
-      <button onclick="checkAnswer('เป็นเส้นตรง')">เป็นเส้นตรง</button>
-      <button onclick="checkAnswer('เป็นโค้ง')">เป็นโค้ง</button>
-      <button onclick="checkAnswer('แนวราบอย่างเดียว')">แนวราบอย่างเดียว</button>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>ข้อมูลผู้เรียน</h2>
-    <div style="text-align: center;">
-      <input type="text" id="studentName" placeholder="ชื่อของคุณ" />
-      <button onclick="saveName()">บันทึก</button>
-      <p>👩‍🎓 <span id="studentNameDisplay"></span></p>
-    </div>
-    <p style="text-align: center;">คะแนน: <span id="score">0</span> | เวลาเรียน: <span id="timer">0:00</span></p>
-  </section>
-
-  <audio id="correctSound" src="../assets/sound/correct.mp3"></audio>
-  <audio id="wrongSound" src="../assets/sound/wrong.mp3"></audio>
+  <audio id="correctSound" src="../assets/audio/correct.mp3"></audio>
+  <audio id="wrongSound" src="../assets/audio/wrong.mp3"></audio>
 
   <script src="../assets/js/projectile-part1.js"></script>
 </body>
