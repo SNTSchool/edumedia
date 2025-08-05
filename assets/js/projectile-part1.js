@@ -78,15 +78,14 @@ function submitQuiz() {
     if (ans === questions[i].correct) score++;
   });
 
-  const correctSound = document.getElementById("correctSound");
-  const wrongSound = document.getElementById("wrongSound");
+
   const result = document.getElementById("result");
 
   if (score === questions.length) {
-    correctSound.play();
+   
     result.innerHTML = `🎉 เก่งมาก! คุณตอบถูกทั้งหมด (${score}/${questions.length})`;
   } else {
-    wrongSound.play();
+   
     result.innerHTML = `คุณได้ ${score}/${questions.length} ข้อ ลองดูเฉลยแล้วทบทวนอีกครั้ง ✨`;
   }
 }
